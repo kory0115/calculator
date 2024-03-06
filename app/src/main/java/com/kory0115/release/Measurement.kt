@@ -1,14 +1,9 @@
 package com.kory0115.release
 
-class Measurement {
-    var num1: Double = 0.0
-    var num2: Int = 0
+class Measurement(_number1: Double, _number2: Double) {
+    var num1: Double = _number1
+    var num2: Double = _number2
     var sum = 0.0
-
-    constructor(_number1: Double, _number2: Int) {
-        num1 = _number1
-        num2 = _number2
-    }
 
     fun add(): Double {
         println(num1)

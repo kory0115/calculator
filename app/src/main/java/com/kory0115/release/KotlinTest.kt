@@ -8,10 +8,18 @@ fun main() {
     println("첫번쨰 숫자를 입력해주세요: ")
     var numa: Double = readLine()!!.toDouble()
 
+    println("두번쨰 숫자를 입력해주세요: ")
+    var numb: Double = readLine()!!.toDouble()
+
     while (true) {
 
-        println("두번쨰 숫자를 입력해주세요(초기화하실려면 0을 넣어주세요): ")
-        val numb: Int = readLine()!!.toInt()
+        if(i in 1..4 || i == 7) { //7은 예외 처리용 숫자
+            println("다음 숫자를 입력해주세요: ")
+            val b: Double = readLine()!!.toDouble()
+            numb = b
+        } else {
+            println("초기화하려면 선택창에서 5번을 눌러주세요")
+        }
 
         println("1.+, 2.-, 3.*, 4./, 5.초기화, 6.종료: ")
         i = readLine()!!.toInt()
@@ -46,6 +54,7 @@ fun main() {
                 println("첫번쨰 숫자를 입력해주세요: ")
                 val a = readLine()!!.toDouble()
                 numa = a
+                i = 7
             }
             6 -> {
                 println("종료 되었습니다.")
