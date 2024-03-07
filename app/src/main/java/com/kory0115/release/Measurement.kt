@@ -26,8 +26,8 @@ class Measurement(_number1: Double, _number2: Double) {
         sum = num1 / num2
         return sum
     }
-    fun initials(): Double {
-        sum = (num1 * 0)
+    fun division2(): Double {
+        sum = num1 % num2
         return sum
     }
 }

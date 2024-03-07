@@ -13,15 +13,15 @@ fun main() {
 
     while (true) {
 
-        if(i in 1..4 || i == 7) { //7은 예외 처리용 숫자
-            println("다음 숫자를 입력해주세요: ")
+        if(i in 1..5 || i == 7) { //7은 예외 처리용 숫자
+            println("다음 숫자를 입력해주세요(값을 초기화하려면 아무 실수나 입력해주세요): ")
             val b: Double = readLine()!!.toDouble()
             numb = b
         } else {
-            println("초기화하려면 선택창에서 5번을 눌러주세요")
+            println("초기화하려면 선택창에서 -1을 눌러주세요")
         }
 
-        println("1.+, 2.-, 3.*, 4./, 5.초기화, 6.종료: ")
+        println("1.+, 2.-, 3.*, 4./, 5. %, -1.초기화, 6.종료: ")
         i = readLine()!!.toInt()
 
         when (i) {
@@ -29,27 +29,28 @@ fun main() {
                 result = Measurement(numa, numb).add()
                 println(result)
                 numa = result
-                //result = numa.toDouble()
             }
             2 -> {
                 result = Measurement(numa, numb).sub()
                 println(result)
                 numa = result
-                //result = numa.toDouble()
             }
             3 -> {
                 result = Measurement(numa, numb).mul()
                 println(result)
                 numa = result
-                //result = numa.toDouble()
             }
             4 -> {
                 result = Measurement(numa, numb).division()
                 println(result)
                 numa = result
-                //result = numa.toDouble()
             }
             5 -> {
+                result = Measurement(numa, numb).division2()
+                println(result)
+                numa = result
+            }
+            -1 -> {
                 println("초기화 중입니다.")
                 println("첫번쨰 숫자를 입력해주세요: ")
                 val a = readLine()!!.toDouble()
