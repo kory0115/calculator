@@ -6,8 +6,6 @@ class Measurement(_number1: Double, _number2: Double) {
     var sum = 0.0
 
     fun add(): Double {
-        println(num1)
-        println(num2)
         sum = num1 + num2
         return sum
     }

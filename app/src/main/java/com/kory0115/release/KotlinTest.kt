@@ -27,27 +27,27 @@ fun main() {
         when (i) {
             1 -> {
                 result = Measurement(numa, numb).add()
-                println(result)
+                println("$numa + $numb = $result")
                 numa = result
             }
             2 -> {
                 result = Measurement(numa, numb).sub()
-                println(result)
+                println("$numa - $numb = $result")
                 numa = result
             }
             3 -> {
                 result = Measurement(numa, numb).mul()
-                println(result)
+                println("$numa * $numb = $result")
                 numa = result
             }
             4 -> {
                 result = Measurement(numa, numb).division()
-                println(result)
+                println("$numa / $numb = $result")
                 numa = result
             }
             5 -> {
                 result = Measurement(numa, numb).division2()
-                println(result)
+                println("$numa % $numb = $result")
                 numa = result
             }
             -1 -> {
