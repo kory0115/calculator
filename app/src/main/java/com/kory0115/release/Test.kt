@@ -1,8 +1,8 @@
 package com.kory0115.release
 
-open class Test(_number1: Double, _number2: Double) {
-    var num1: Double = _number1
-    var num2: Double = _number2
+abstract class Test() {
+    abstract var num1: Double
+    abstract var num2: Double
     var sum = 0.0
 
     open fun add(): Double {
@@ -26,35 +26,50 @@ open class Test(_number1: Double, _number2: Double) {
     }
 }
 
-class AddOperation(_number1: Double, _number2: Double) : Test(_number1, _number2){
+class AddOperation(_number1: Double, _number2: Double) : Test(){
+    override var num1: Double = _number1
+    override var num2: Double = _number2
+
     override fun add(): Double {
         sum = num1 + num2
         return sum
     }
 }
 
-class SubstractOperation(_number1: Double, _number2: Double) : Test(_number1, _number2) {
+class SubstractOperation(_number1: Double, _number2: Double) : Test() {
+    override var num1: Double = _number1
+    override var num2: Double = _number2
+
     override fun sub(): Double {
         sum = num1 - num2
         return sum
     }
 }
 
-class MultiplyOperation(_number1: Double, _number2: Double) : Test(_number1, _number2) {
+class MultiplyOperation(_number1: Double, _number2: Double) : Test() {
+    override var num1: Double = _number1
+    override var num2: Double = _number2
+
     override fun mul(): Double {
         sum = num1 * num2
         return sum
     }
 }
 
-class DivideOperation(_number1: Double, _number2: Double) : Test(_number1, _number2) {
+class DivideOperation(_number1: Double, _number2: Double) : Test() {
+    override var num1: Double = _number1
+    override var num2: Double = _number2
+
     override fun division(): Double {
         sum = num1 / num2
         return sum
     }
 }
 
-class remainderOperation(_number1: Double, _number2: Double) : Test(_number1, _number2) {
+class remainderOperation(_number1: Double, _number2: Double) : Test() {
+    override var num1: Double = _number1
+    override var num2: Double = _number2
+
     override fun remainder(): Double {
         sum = num1 % num2
         return sum
