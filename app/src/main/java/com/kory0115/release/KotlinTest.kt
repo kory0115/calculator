@@ -2,7 +2,7 @@ package com.kory0115.release
 
 fun main() {
 
-    var result: Double
+    var result : Double
     var i = 0
 
     println("첫번쨰 숫자를 입력해주세요: ")
@@ -13,7 +13,7 @@ fun main() {
 
     while (true) {
 
-        if(i in 1..5 || i == 7) { //7은 예외 처리용 숫자
+        if(i in 1..5 || i == 7) {
             println("다음 숫자를 입력해주세요(값을 초기화하려면 아무 실수나 입력해주세요): ")
             val b: Double = readLine()!!.toDouble()
             numb = b
@@ -26,27 +26,28 @@ fun main() {
 
         when (i) {
             1 -> {
-                result = Measurement(numa, numb).add()
+                //result = Measurement(numa, numb).add()
+                result = AddOperation(numa, numb).add()
                 println("$numa + $numb = $result")
                 numa = result
             }
             2 -> {
-                result = Measurement(numa, numb).sub()
+                result = SubstractOperation(numa, numb).sub()
                 println("$numa - $numb = $result")
                 numa = result
             }
             3 -> {
-                result = Measurement(numa, numb).mul()
+                result = MultiplyOperation(numa, numb).mul()
                 println("$numa * $numb = $result")
                 numa = result
             }
             4 -> {
-                result = Measurement(numa, numb).division()
+                result = DivideOperation(numa, numb).division()
                 println("$numa / $numb = $result")
                 numa = result
             }
             5 -> {
-                result = Measurement(numa, numb).division2()
+                result = remainderOperation(numa, numb).remainder()
                 println("$numa % $numb = $result")
                 numa = result
             }
